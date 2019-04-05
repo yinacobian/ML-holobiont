@@ -38,8 +38,8 @@ ID=$(cat $IDSFILE | head -n $SGE_TASK_ID | tail -n 1)
 
 perl /home1/mlittle/bin/besthitblast.pl ${OUT_FOLDER}/vs_${DB_NAME}_80id_${ID}.blastn > ${OUT_FOLDER}/besthit_vs_${DB_NAME}_80id_${ID}.blastn
 	
-#to count:
-#ls | xargs -I{} sh -c 'wc -l {}' | paste - - | sed 's/ /\t/' > size.txt
+#to count, go to the folder with the blast besthit results :
+#ls | grep 'besthit*' | xargs -I{} sh -c 'wc -l {}' | sed 's/ /\t/'  > coral_hits.txt
 
 #example
  
